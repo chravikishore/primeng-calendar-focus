@@ -1,7 +1,10 @@
 <form id="TFormId" name="tform" pFocusTrap>
 <hello name="{{ name }}"></hello>
 <p>
-	<p-calendar ></p-calendar>
+  <input type="text" [(ngModel)]="firstFieldVariable" name="firstField">
+	<p-calendar [(ngModel)]="frmDate" name="frmDate"></p-calendar>
+  <input pInputText type="text" class="form-control" [(ngModel)]="secondeFieldVariable" name="second"/>
+  ravi kishore
 </p>
 <p>
 <p-table [value]="cars">
@@ -18,7 +21,7 @@
             <td pEditableColumn>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <input pInputText type="text" [(ngModel)]="rowData.vin">
+                        <input pInputText type="text" [(ngModel)]="rowData.vin" name="vin">
                     </ng-template>
                     <ng-template pTemplate="output">
                         {{rowData.vin}}
@@ -28,7 +31,7 @@
             <td pEditableColumn>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <input pInputText type="text" [(ngModel)]="rowData.year" required>
+                        <input pInputText type="text" [(ngModel)]="rowData.year" required name="year">
                     </ng-template>
                     <ng-template pTemplate="output">
                         {{rowData.year}}
@@ -38,7 +41,7 @@
             <td pEditableColumn>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <p-dropdown [options]="brands" [(ngModel)]="rowData.brand" [style]="{'width':'100%'}"></p-dropdown>
+                        <p-dropdown [options]="brands" [(ngModel)]="rowData.brand" [style]="{'width':'100%'}" name="brand"></p-dropdown>
                     </ng-template>
                     <ng-template pTemplate="output">
                         {{rowData.brand}}
@@ -48,7 +51,7 @@
             <td pEditableColumn>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <input pInputText type="text" [(ngModel)]="rowData.color">
+                        <input pInputText type="text" [(ngModel)]="rowData.color" name="color">
                     </ng-template>
                     <ng-template pTemplate="output">
                         {{rowData.color}}
