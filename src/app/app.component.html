@@ -1,9 +1,9 @@
 <form id="TFormId" name="tform" pFocusTrap>
 <hello name="{{ name }}"></hello>
 <p>
-  <input type="text" [(ngModel)]="firstFieldVariable" name="firstField">
-	<p-calendar [(ngModel)]="frmDate" name="frmDate"></p-calendar>
-  <input pInputText type="text" class="form-control" [(ngModel)]="secondeFieldVariable" name="second"/>
+  <input type="text" [(ngModel)]="firstFieldVariable" name="firstField" tabindex="0">
+	<p-calendar [(ngModel)]="frmDate" name="frmDate" tabindex="1"></p-calendar>
+  <input pInputText type="text" class="form-control" [(ngModel)]="secondeFieldVariable" name="second" tabindex="2"/>
   ravi kishore
 </p>
 <p>
@@ -21,7 +21,7 @@
             <td pEditableColumn>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <input pInputText type="text" [(ngModel)]="rowData.vin" name="vin">
+                        <input pInputText type="text" [(ngModel)]="rowData.vin" name="vin" tabindex="3">
                     </ng-template>
                     <ng-template pTemplate="output">
                         {{rowData.vin}}
@@ -31,7 +31,7 @@
             <td pEditableColumn>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <input pInputText type="text" [(ngModel)]="rowData.year" required name="year">
+                        <input pInputText type="text" [(ngModel)]="rowData.year" required name="year" tabindex="4">
                     </ng-template>
                     <ng-template pTemplate="output">
                         {{rowData.year}}
@@ -41,7 +41,7 @@
             <td pEditableColumn>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <p-dropdown [options]="brands" [(ngModel)]="rowData.brand" [style]="{'width':'100%'}" name="brand"></p-dropdown>
+                        <p-dropdown [options]="brands" [(ngModel)]="rowData.brand" [style]="{'width':'100%'}" name="brand" tabindex="5"></p-dropdown>
                     </ng-template>
                     <ng-template pTemplate="output">
                         {{rowData.brand}}
@@ -51,7 +51,7 @@
             <td pEditableColumn>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <input pInputText type="text" [(ngModel)]="rowData.color" name="color">
+                        <input pInputText type="text" [(ngModel)]="rowData.color" name="color" tabindex="6">
                     </ng-template>
                     <ng-template pTemplate="output">
                         {{rowData.color}}
